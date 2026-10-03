@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#090807" />
+  <meta name="description" content="Skitjaff competitive Minecraft PvP tier rankings." />
+  <title>Skitjaff Tiers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="ambient"></div>
+
+  <header class="topbar">
+    <a class="crest" href="#" aria-label="Skitjaff Tiers home">
+      <span class="crest-inner">S</span>
+    </a>
+
+    <button class="server-chip" id="copyServer" type="button" title="Copy server IP">
+      <small>SERVER IP:</small>
+      <strong><span class="diamond">◆</span> COMING SOON</strong>
+    </button>
+
+    <button class="menu" id="menuToggle" type="button" aria-expanded="false">
+      <span>MENU</span>
+      <i class="hamb"><b></b><b></b><b></b></i>
+    </button>
+
+    <div class="menu-panel" id="menuPanel">
+      <a href="#rankings">Rankings</a>
+      <a href="#testing">Testing</a>
+      <a href="#" id="discordLink">Discord</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <span class="eyebrow">SKITJAFF COMPETITIVE PVP</span>
+        <h1>PLAYER <em>TIERS</em></h1>
+      </div>
+      <p>Competitive Minecraft rankings across multiple PvP kits. Pick a mode to view its leaderboard.</p>
+    </section>
+
+    <section class="mode-shell" aria-label="PvP modes">
+      <nav class="mode-tabs" id="modeTabs">
+        <button class="mode active" data-mode="overall"><span class="icon">🏆</span><b>OVERALL</b></button>
+        <button class="mode" data-mode="crystal"><span class="icon">🔮</span><b>CRYSTAL</b></button>
+        <button class="mode" data-mode="sword"><span class="icon">🗡️</span><b>SWORD</b></button>
+        <button class="mode" data-mode="uhc"><span class="icon">❤️</span><b>UHC</b></button>
+        <button class="mode" data-mode="pot"><span class="icon">🧪</span><b>POT</b></button>
+        <button class="mode" data-mode="nethpot"><span class="icon">⬛</span><b>NETHERITE POT</b></button>
+        <button class="mode" data-mode="smp"><span class="icon">🌐</span><b>SMP</b></button>
+        <button class="mode" data-mode="axe"><span class="icon">🪓</span><b>AXE</b></button>
+        <button class="mode" data-mode="mace"><span class="icon">🔨</span><b>MACE</b></button>
+      </nav>
+    </section>
+
+    <section class="board" id="rankings">
+      <div class="board-toolbar">
+        <div>
+          <span class="tiny-label">CURRENT MODE</span>
+          <h2 id="modeTitle">OVERALL RANKINGS</h2>
+        </div>
+        <label class="search">
+          <span>⌕</span>
+          <input id="searchInput" autocomplete="off" placeholder="Search player..." />
+        </label>
+      </div>
+
+      <div class="table-wrap">
+        <div class="table-head table-grid">
+          <span>#</span>
+          <span>PLAYER</span>
+          <span>REGION</span>
+          <span>POINTS</span>
+          <span>TIER</span>
+        </div>
+        <div id="rows"></div>
+      </div>
+    </section>
+
+    <section class="testing" id="testing">
+      <div>
+        <span class="tiny-label">GET RANKED</span>
+        <h2>Think you deserve a tier?</h2>
+        <p>Join the Discord, request a test, fight an approved tester, and receive a placement for that mode.</p>
+      </div>
+      <button class="cta" id="testButton" type="button">REQUEST A TEST</button>
+    </section>
+  </main>
+
+  <footer>
+    <span>SKITJAFF TIERS</span>
+    <span>Community PvP rankings · Not affiliated with Mojang or Microsoft</span>
+  </footer>
+
+  <div class="toast" id="toast">Copied</div>
+  <script src="script.js"></script>
+</body>
+</html>
